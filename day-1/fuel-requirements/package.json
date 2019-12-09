@@ -1,0 +1,30 @@
+{
+  "name": "fuel-requirements",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fuel-requirements.js",
+  "scripts": {
+    "test": "jest --config=.jestrc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiepreston/advent-of-code.git"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.6.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamiepreston/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/jamiepreston/advent-of-code#readme"
+}
