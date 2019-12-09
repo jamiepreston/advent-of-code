@@ -1,9 +1,22 @@
 // https://adventofcode.com/2019/day/1
-// For a mass of 12, divide by 3 and round down to get 4, then subtract 2 to get 2.
-export const getFuelRequiredForModule = mass =>
+
+export const getFuelRequiredForModuleV1 = mass =>
   Math.floor(mass / 3) - 2;
 
-export const getTotalFuelRequired = modulesList =>
+export const getTotalFuelRequiredV1 = modulesList =>
   modulesList.reduce((runningTotal, moduleMass) =>
-    runningTotal + getFuelRequiredForModule(moduleMass)
+    runningTotal + getFuelRequiredForModuleV1(moduleMass)
   , 0);
+
+export const getFuelRequiredForModuleV2 = (fuelRequired) => {
+  const additionalFuel = Math.floor(fuelRequired / 3) - 2;
+  return additionalFuel <= 0
+    ? 0
+    : additionalFuel + getFuelRequiredForModuleV2(additionalFuel);
+};
+
+export const getTotalFuelRequiredV2 = modulesList =>
+  modulesList.reduce((runningTotal, moduleMass) => {
+    const basicFuelRequired = getFuelRequiredForModuleV2(moduleMass);
+    return runningTotal + basicFuelRequired;
+  }, 0);
