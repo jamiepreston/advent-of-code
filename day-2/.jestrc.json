@@ -1,0 +1,5 @@
+{
+  "rootDir": "test",
+  "testEnvironment": "node",
+  "verbose": true
+}
