@@ -103,7 +103,7 @@ describe('1202-program-alarm-part-1', () => {
     it('should solve the given puzzle', () => {
       const intcodeComputer = new IntcodeComputer(code);
       const expectedResult = 4090701;
-      const [ result ] = intcodeComputer.execute();
+      const [result] = intcodeComputer.execute();
 
       expect(result).toEqual(expectedResult);
     });
