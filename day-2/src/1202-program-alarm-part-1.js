@@ -1,4 +1,5 @@
 // https://adventofcode.com/2019/day/2
+
 const calculateValue = (code, position) => {
     const [
       command,
